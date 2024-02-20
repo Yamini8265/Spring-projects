@@ -2,10 +2,16 @@ package com.springproject.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	@Size(min = 10,message="Enter atleast 10 characters")
 	private String description;
